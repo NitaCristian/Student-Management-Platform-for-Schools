@@ -14,12 +14,11 @@ class CreateTransactionsTable extends Migration
     public function up()
     {
         Schema::create('transactions', function (Blueprint $table) {
-            $table->bigIncrements('transaction_id');
-            $table->integer('student_id');
-            $table->integer('fee_id');
-            $table->integer('user_id');
-            $table->integer('paid');
-            $table->date('transaction_date');
+            $table->id();
+            $table->unsignedBigInteger('student_id');
+            $table->unsignedBigInteger('user_id');
+            $table->integer('price');
+            $table->date('date');
             $table->longText('remark');
             $table->longText('description');
             $table->softDeletes();

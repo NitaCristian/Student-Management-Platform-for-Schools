@@ -14,8 +14,8 @@ class CreateAcademicsTable extends Migration
     public function up()
     {
         Schema::create('academics', function (Blueprint $table) {
-            $table->bigIncrements('academic_id');
-            $table->string('academic_year');
+            $table->id();
+            $table->string('year');
             $table->softDeletes();
             $table->timestamps();
         });

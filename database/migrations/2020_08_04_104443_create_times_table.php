@@ -14,7 +14,7 @@ class CreateTimesTable extends Migration
     public function up()
     {
         Schema::create('times', function (Blueprint $table) {
-            $table->bigIncrements('time_id');
+            $table->id();
             $table->string('time');
             $table->softDeletes();
             $table->timestamps();

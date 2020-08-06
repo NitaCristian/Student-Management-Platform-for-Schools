@@ -14,7 +14,7 @@ class CreateDaysTable extends Migration
     public function up()
     {
         Schema::create('days', function (Blueprint $table) {
-            $table->bigIncrements('day_id');
+            $table->id();
             $table->string('name');
             $table->softDeletes();
             $table->timestamps();
